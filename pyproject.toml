@@ -9,6 +9,7 @@ packages = [{include = "streamlit_schools"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pandas = "^2.2.1"
+llama2 = "^0.0.1.dev0"
 
 
 [build-system]
