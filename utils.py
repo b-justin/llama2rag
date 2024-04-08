@@ -2,16 +2,13 @@ import os
 import time
 
 import requests
-
-# from dotenv import load_dotenv
-# from dotenv import load_dotenv, find_dotenv
-
+from dotenv import find_dotenv, load_dotenv
 
 # Initailize global variables
-# _ = load_dotenv(find_dotenv())
+_ = load_dotenv(find_dotenv())
 # warnings.filterwarnings('ignore')
-url = f"""{os.getenv('DLAI_TOGETHER_API_BASE',
-                     'https://api.together.xyz')}/inference"""
+
+url = "https://api.together.xyz/inference"
 headers = {
     "Authorization": f"Bearer {os.getenv('TOGETHER_API_KEY')}",
     "Content-Type": "application/json",
