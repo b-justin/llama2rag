@@ -1,0 +1,2 @@
+# streamlit-schools
+School checker
