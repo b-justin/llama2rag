@@ -13,6 +13,7 @@ llama2 = "^0.0.1.dev0"
 utils = "^1.0.2"
 requests = "^2.31.0"
 python-dotenv = "^1.0.1"
+streamlit = "^1.33.0"
 
 
 [tool.poetry.group.dev.dependencies]
