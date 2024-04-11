@@ -13,14 +13,20 @@ headers = {
 
 
 def llama(
-    prompt,
+    question,
+    context="",
     add_inst=True,
-    model="togethercomputer/llama-2-7b-chat",
+    model="togethercomputer/llama-2-70b-chat",
     temperature=0.0,
     max_tokens=1024,
     url=url,
     headers=headers,
 ):
+
+    if context:
+        prompt = f"[CONTEXT] {context.strip()} \\n [PROMPT] {question.strip()}"
+    else:
+        prompt = question.strip()
 
     if add_inst:
         prompt = f"[INST]{prompt}[/INST]"
